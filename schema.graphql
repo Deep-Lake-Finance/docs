@@ -1,0 +1,648 @@
+type Account {
+  id: String!
+  wallet: String
+  debit: String
+  credit: String
+}
+
+input AccountWhereInput {
+  id: String
+  wallet: String
+}
+
+type Query {
+  balance(where: AccountWhereInput): Account
+  actions(where: ActionWhereInput, take: Int, skip: Int, gt: ActionWhereInput, lt: ActionWhereInput, like: ActionWhereInput, orderBy: [JSONObject]): Actions
+  action(where: ActionWhereInput): Action
+  addresses(where: AddressWhereInput, take: Int, skip: Int, gt: AddressWhereInput, lt: AddressWhereInput, like: AddressWhereInput, orderBy: [JSONObject]): Addresses
+  address(where: AddressWhereInput): Address
+  board: JSONObject
+  assets(where: AssetWhereInput, take: Int, skip: Int, gt: AssetWhereInput, lt: AssetWhereInput, like: AssetWhereInput, orderBy: [JSONObject]): Assets
+  asset(where: AssetWhereInput): Asset
+  cets(where: CetWhereInput, take: Int, skip: Int, gt: CetWhereInput, lt: CetWhereInput, like: CetWhereInput, orderBy: [JSONObject]): Cets
+  cet(where: CetWhereInput): Cet
+  collaterals(where: CollateralWhereInput, take: Int, skip: Int, gt: CollateralWhereInput, lt: ActionWhereInput, like: ActionWhereInput, orderBy: [JSONObject]): Actions
+  collateral(where: ActionWhereInput): Collateral
+  discount(where: DiscountWhereInput): Discount
+  escrows(where: EscrowWhereInput, take: Int, skip: Int, gt: EscrowWhereInput, lt: EscrowWhereInput, like: EscrowWhereInput, orderBy: [JSONObject]): Escrows
+  escrow(where: EscrowWhereInput): Escrow
+  fee(where: FeeWhereInput): Fee
+  holdings(where: HoldingWhereInput, take: Int, skip: Int, gt: HoldingWhereInput, lt: HoldingWhereInput, like: HoldingWhereInput, orderBy: [JSONObject]): Holdings
+  key(where: KeyWhereInput): Key
+  tvl(where: LiquidityWhereInput, lt: LiquidityWhereInput): Liquidity
+  organizations(where: OrganizationWhereInput, take: Int, skip: Int, gt: OrganizationWhereInput, lt: OrganizationWhereInput, like: OrganizationWhereInput, orderBy: [JSONObject]): Organizations
+  organization(where: OrganizationWhereInput): Organization
+  outcomes(where: OutcomeWhereInput, take: Int, skip: Int, gt: OutcomeWhereInput, lt: OutcomeWhereInput, like: OutcomeWhereInput, orderBy: [JSONObject]): Outcomes
+  outcome(where: OutcomeWhereInput): Outcome
+  positions(where: PositionWhereInput, take: Int, skip: Int, gt: PositionWhereInput, lt: PositionWhereInput, like: PositionWhereInput, orderBy: [JSONObject]): Positions
+  products(where: ProductWhereInput, take: Int, skip: Int, gt: ProductWhereInput, lt: ProductWhereInput, like: ProductWhereInput, orderBy: [JSONObject]): Products
+  product(where: ProductWhereInput): Product
+  signatures(where: SignatureWhereInput, take: Int, skip: Int, gt: SignatureWhereInput, lt: SignatureWhereInput, like: SignatureWhereInput, orderBy: [JSONObject]): Signatures
+  signature(where: SignatureWhereInput): Signature
+  users(where: UserWhereInput, take: Int, skip: Int, like: JSONObject): Users
+  user(where: UserWhereInput): User
+  profile: User
+  webhooks(where: WebhookWhereInput, take: Int, skip: Int, gt: WebhookWhereInput, lt: WebhookWhereInput, like: WebhookWhereInput, orderBy: [JSONObject]): Webhooks
+  webhook(where: WebhookWhereInput): Webhook
+}
+
+type Subscription {
+  balanceUpdated(where: AccountWhereInput): Account
+  positionAdded(where: PositionWhereInput): Position
+  positionUpdated(where: PositionWhereInput): Position
+}
+
+type Action {
+  id: String!
+  type: String
+  configuration: JSONObject
+  outcomes: [Outcome]
+  product: Product
+}
+
+type Actions {
+  data: [Action]
+  count: Int
+}
+
+input ActionWhereInput {
+  id: String
+  type: String
+  configuration: JSONObject
+  product: ProductWhereInput
+}
+
+input ActionDataInput {
+  id: String
+  type: String
+  outcomes: [OutcomeDataInput]
+  configuration: JSONObject
+  product: ProductDataInput
+}
+
+type Mutation {
+  createAction(data: ActionDataInput): Action
+  updateAction(where: ActionWhereInput, data: ActionDataInput): Action
+  executeAction(where: ActionWhereInput): Action
+  createAddress(data: AddressDataInput): Address
+  updateAddress(data: AddressDataInput, where: AddressWhereInput): Address
+  createAsset(data: AssetDataInput): Asset
+  updateAsset(data: AssetDataInput, where: AssetWhereInput): Asset
+  updateCet(where: CetWhereInput, data: CetDataInput): Cet
+  createCollateral(data: CollateralDataInput): Collateral
+  updateCollateral(where: CollateralWhereInput, data: CollateralDataInput): Collateral
+  claim(data: DiscountWhereInput): Discount
+  createEscrow(data: EscrowDataInput): Escrow
+  updateEscrow(where: EscrowWhereInput, data: EscrowDataInput): Escrow
+  broadcastEscrow(data: EscrowDataInput): Escrow
+  executeEscrow(where: EscrowWhereInput): Escrow
+  createOrganization(data: OrganizationDataInput): Organization
+  updateOrganization(data: OrganizationDataInput, where: OrganizationWhereInput): Organization
+  createOutcome(data: OutcomeWhereInput): Outcome
+  executeOutcome(where: OutcomeWhereInput, data: OutcomeDataInput): Outcome
+  createProduct(data: ProductDataInput): Product
+  executeSignature(where: SignatureWhereInput, data: SignatureDataInput): Signature
+  addUser(data: UserDataInput): User
+  updateUser(where: UserWhereInput, data: UserDataInput): User
+  deleteUser(where: UserWhereInput): User
+  createWebhook(data: WebhookDataInput): Webhook
+  updateWebhook(data: WebhookDataInput, where: WebhookWhereInput): Webhook
+}
+
+type Address {
+  id: String!
+  value: String
+  publicKey: String
+  type: String
+  meta: JSONObject
+  escrow: Escrow
+}
+
+type Addresses {
+  data: [Address]
+  count: Int
+}
+
+input AddressWhereInput {
+  id: String
+  value: String
+  publicKey: String
+  type: String
+  meta: JSONObject
+  escrow: EscrowWhereInput
+}
+
+input AddressDataInput {
+  id: String
+  value: String
+  publicKey: String
+  type: String
+  meta: JSONObject
+  escrow: EscrowDataInput
+}
+
+type Asset {
+  id: String!
+  type: String
+  amount: String
+  usdValue: String
+  content: JSONObject
+  collateral: Collateral
+  addresses: [Address]
+  action: Action
+}
+
+type Assets {
+  data: [Asset]
+  count: Int
+}
+
+input AssetWhereInput {
+  id: String
+  type: String
+  amount: String
+  usdValue: String
+  content: JSONObject
+  collateral: CollateralWhereInput
+  addresses: [AddressWhereInput]
+  action: ActionWhereInput
+}
+
+input AssetDataInput {
+  id: String
+  type: String
+  amount: String
+  usdValue: String
+  content: JSONObject
+  collateral: CollateralDataInput
+  addresses: [AddressDataInput]
+  action: ActionDataInput
+}
+
+type Cet {
+  id: String!
+  transactions: [Transaction]
+  collateral: Collateral
+}
+
+type Cets {
+  data: [Cet]
+  count: Int
+}
+
+input CetWhereInput {
+  id: String
+  transactions: [TransactionWhereInput]
+  collateral: CollateralWhereInput
+}
+
+input CetDataInput {
+  id: String
+  transactions: [TransactionDataInput]
+  collateral: CollateralDataInput
+}
+
+type Collateral {
+  id: String!
+  assets: [Asset]
+  escrow: Escrow
+}
+
+type Collaterals {
+  data: [Collateral]
+  count: Int
+}
+
+input CollateralWhereInput {
+  id: String
+  assets: [AssetWhereInput]
+  escrow: EscrowWhereInput
+}
+
+input CollateralDataInput {
+  id: String
+  assets: [AssetDataInput]
+  escrow: EscrowDataInput
+}
+
+type Condition {
+  id: ID
+  leftOperand: JSONObject
+  rightOperand: JSONObject
+  operation: String
+  outcome: Outcome
+}
+
+type Conditions {
+  data: [Condition]
+  count: Int!
+}
+
+input ConditionWhereInput {
+  id: ID
+  leftOperand: JSONObject
+  rightOperand: JSONObject
+  operation: String
+  outcome: OutcomeWhereInput
+}
+
+input ConditionDataInput {
+  id: ID
+  leftOperand: JSONObject
+  rightOperand: JSONObject
+  operation: String
+  outcome: OutcomeWhereInput
+}
+
+type Discount {
+  id: String!
+  wallet: String
+}
+
+input DiscountWhereInput {
+  id: String
+  wallet: String
+}
+
+type Escrow {
+  id: String!
+  startDate: String
+  endDate: String
+  hex: String
+  cets: [Cet]
+  collateral: Collateral
+  transactions: [Transaction]
+}
+
+type Escrows {
+  data: [Escrow]
+  count: Int
+}
+
+input EscrowWhereInput {
+  id: String
+  startDate: String
+  endDate: String
+  publicKey: String
+  hex: String
+  cets: [CetWhereInput]
+  collateral: CollateralWhereInput
+  transactions: [TransactionWhereInput]
+  organization: OrganizationWhereInput
+}
+
+input EscrowDataInput {
+  id: String
+  startDate: String
+  endDate: String
+  publicKey: String
+  hex: String
+  cets: [CetWhereInput]
+  collateral: CollateralDataInput
+  transactions: [TransactionDataInput]
+}
+
+type Fee {
+  value: String
+  escrow: Escrow
+}
+
+input FeeWhereInput {
+  value: String
+  escrow: EscrowWhereInput
+}
+
+scalar JSONObject
+
+type Holding {
+  id: String!
+  user: String
+  type: String
+  amount: Int
+  collateralization: Int
+  status: String
+  holdingId: Int
+}
+
+type Holdings {
+  data: [Holding]
+  count: Int
+}
+
+input HoldingWhereInput {
+  id: String
+  user: String
+  type: String
+}
+
+type Key {
+  id: ID!
+  organization: Organization
+  product: Product
+}
+
+input KeyWhereInput {
+  id: ID
+  value: String
+}
+
+type Liquidity {
+  id: Int
+  amount: String
+  escrow: Escrow
+  organization: Organization
+}
+
+input LiquidityWhereInput {
+  id: Int
+  amount: String
+  escrow: EscrowWhereInput
+  organization: OrganizationWhereInput
+}
+
+type Organization {
+  id: String!
+  name: String
+  logo: String
+  webhooks: [Webhook]
+}
+
+type Organizations {
+  data: [Organization]
+  count: Int
+}
+
+input OrganizationWhereInput {
+  id: String
+  name: String
+  logo: String
+  webhooks: [WebhookWhereInput]
+}
+
+input OrganizationDataInput {
+  id: String
+  name: String
+  logo: String
+  webhooks: [WebhookWhereInput]
+}
+
+type Outcome {
+  id: String!
+  description: String
+  tag: String
+  signature: Signature
+  asset: Asset
+}
+
+type Outcomes {
+  data: [Outcome]
+  count: Int
+}
+
+input OutcomeWhereInput {
+  id: String
+  description: String
+  tag: String
+  signature: SignatureWhereInput
+  asset: AssetWhereInput
+}
+
+input OutcomeDataInput {
+  id: String
+  description: String
+  tag: String
+  signature: SignatureDataInput
+  asset: AssetDataInput
+}
+
+type Party {
+  id: String!
+  address: String
+  publicKey: String
+  input: String
+  collateral: String
+  funding: JSONObject
+  change: JSONObject
+  final: JSONObject
+}
+
+type Partys {
+  data: [Party]
+  count: Int
+}
+
+input PartyWhereInput {
+  id: String
+  address: String
+  publicKey: String
+  input: String
+  collateral: String
+  funding: JSONObject
+  change: JSONObject
+  final: JSONObject
+}
+
+input PartyDataInput {
+  id: String
+  address: String
+  publicKey: String
+  input: String
+  collateral: String
+  funding: JSONObject
+  change: JSONObject
+  final: JSONObject
+}
+
+type Position {
+  id: String
+  user: String
+  type: String
+  size: Float
+  support: Int
+  market: Int
+  entryPrice: Float
+  status: String
+  positionId: Int
+}
+
+type Positions {
+  data: [Position]
+  count: Int
+}
+
+input PositionWhereInput {
+  user: String
+  market: Int
+}
+
+type Product {
+  id: String
+  name: String
+  type: String
+}
+
+type Products {
+  data: [Product]
+  count: Int
+}
+
+input ProductWhereInput {
+  id: String
+  name: String
+  type: String
+}
+
+input ProductDataInput {
+  id: String
+  name: String
+  type: String
+}
+
+type Signature {
+  id: String
+  publicKey: String
+  released: Boolean
+  outcome: Outcome
+}
+
+type Signatures {
+  data: [Signature]
+  count: Int
+}
+
+input SignatureWhereInput {
+  id: String
+  value: String
+  publicKey: String
+  released: Boolean
+  outcome: OutcomeWhereInput
+  OR: [SignatureWhereInput]
+}
+
+input SignatureDataInput {
+  id: String
+  value: String
+  publicKey: String
+  released: Boolean
+  transactions: [TransactionDataInput]
+  OR: [SignatureDataInput]
+}
+
+type Transaction {
+  id: String
+  hex: String
+  type: String
+  base64: String
+  txid: String
+  inputs: Int
+  outputs: Int
+}
+
+type Transactions {
+  data: [Transaction]
+  count: Int
+}
+
+input TransactionWhereInput {
+  id: String
+  hex: String
+  type: String
+  base64: String
+  txid: String
+  inputs: Int
+  outputs: Int
+}
+
+input TransactionDataInput {
+  id: String
+  hex: String
+  type: String
+  base64: String
+  txid: String
+  inputs: Int
+  outputs: Int
+}
+
+type User {
+  id: ID!
+  lastname: String
+  firstname: String
+  birthDate: String
+  createdDate: String
+  updatedDate: String
+  gender: String
+  email: String
+  phone: String
+  meta: JSONObject
+  organization: Organization
+}
+
+input UserWhereInput {
+  id: ID
+  password: String
+  email: String
+  phone: String
+  lastname: String
+  firstname: String
+  meta: JSONObject
+  birthDate: String
+  gender: String
+  organization: OrganizationWhereInput
+}
+
+input UserDataInput {
+  id: ID
+  firstname: String
+  lastname: String
+  email: String
+  phone: String
+  meta: JSONObject
+  birthDate: String
+  gender: String
+}
+
+input UserCronParamsInput {
+  data: UserWhereInput
+  type: String
+}
+
+input UserCronInput {
+  interval: String
+  type: String
+  once: Boolean
+  params: UserCronParamsInput
+}
+
+type Users {
+  data: [User!]!
+  count: Int!
+}
+
+type Webhook {
+  id: String!
+  name: String
+  description: String
+  url: String
+  organization: Organization
+}
+
+type Webhooks {
+  data: [Webhook]
+  count: Int
+}
+
+input WebhookWhereInput {
+  id: String
+  name: String
+  description: String
+  url: String
+  organization: OrganizationWhereInput
+}
+
+input WebhookDataInput {
+  id: String
+  name: String
+  description: String
+  url: String
+  organization: OrganizationWhereInput
+}

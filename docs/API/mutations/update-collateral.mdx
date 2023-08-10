@@ -1,0 +1,45 @@
+---
+id: update-collateral
+title: updateCollateral
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+updateCollateral(
+  where: CollateralWhereInput
+  data: CollateralDataInput
+): Collateral
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>updateCollateral.<b>where</b></code>](#)<Bullet />[`CollateralWhereInput`](/docs/api/inputs/collateral-where-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>updateCollateral.<b>data</b></code>](#)<Bullet />[`CollateralDataInput`](/docs/api/inputs/collateral-data-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+### Type
+
+#### [`Collateral`](/docs/api/objects/collateral) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+
+

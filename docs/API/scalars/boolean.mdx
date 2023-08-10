@@ -1,0 +1,30 @@
+---
+id: boolean
+title: Boolean
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+The `Boolean` scalar type represents `true` or `false`.
+
+```graphql
+scalar Boolean
+```
+
+
+
+
+### Member of
+
+[`include`](/docs/api/directives/include)  <Badge class="secondary" text="directive"/><Bullet />[`Signature`](/docs/api/objects/signature)  <Badge class="secondary" text="object"/><Bullet />[`SignatureDataInput`](/docs/api/inputs/signature-data-input)  <Badge class="secondary" text="input"/><Bullet />[`SignatureWhereInput`](/docs/api/inputs/signature-where-input)  <Badge class="secondary" text="input"/><Bullet />[`skip`](/docs/api/directives/skip)  <Badge class="secondary" text="directive"/><Bullet />[`UserCronInput`](/docs/api/inputs/user-cron-input)  <Badge class="secondary" text="input"/>
+
+
+

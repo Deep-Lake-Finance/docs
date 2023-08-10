@@ -1,0 +1,83 @@
+---
+id: user-where-input
+title: UserWhereInput
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+input UserWhereInput {
+  id: ID
+  password: String
+  email: String
+  phone: String
+  lastname: String
+  firstname: String
+  meta: JSONObject
+  birthDate: String
+  gender: String
+  organization: OrganizationWhereInput
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>UserWhereInput.<b>id</b></code>](#)<Bullet />[`ID`](/docs/api/scalars/id) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>UserWhereInput.<b>password</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>UserWhereInput.<b>email</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>UserWhereInput.<b>phone</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>UserWhereInput.<b>lastname</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>UserWhereInput.<b>firstname</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>UserWhereInput.<b>meta</b></code>](#)<Bullet />[`JSONObject`](/docs/api/scalars/jsonobject) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>UserWhereInput.<b>birthDate</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>UserWhereInput.<b>gender</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>UserWhereInput.<b>organization</b></code>](#)<Bullet />[`OrganizationWhereInput`](/docs/api/inputs/organization-where-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+
+
+### Member of
+
+[`deleteUser`](/docs/api/mutations/delete-user)  <Badge class="secondary" text="mutation"/><Bullet />[`updateUser`](/docs/api/mutations/update-user)  <Badge class="secondary" text="mutation"/><Bullet />[`user`](/docs/api/queries/user)  <Badge class="secondary" text="query"/><Bullet />[`UserCronParamsInput`](/docs/api/inputs/user-cron-params-input)  <Badge class="secondary" text="input"/><Bullet />[`users`](/docs/api/queries/users)  <Badge class="secondary" text="query"/>
+
+
+

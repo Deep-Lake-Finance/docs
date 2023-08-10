@@ -1,0 +1,77 @@
+---
+id: asset
+title: Asset
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type Asset {
+  id: String!
+  type: String
+  amount: String
+  usdValue: String
+  content: JSONObject
+  collateral: Collateral
+  addresses: [Address]
+  action: Action
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Asset.<b>id</b></code>](#)<Bullet />[`String!`](/docs/api/scalars/string) <Badge class="secondary" text="non-null"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Asset.<b>type</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Asset.<b>amount</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Asset.<b>usdValue</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Asset.<b>content</b></code>](#)<Bullet />[`JSONObject`](/docs/api/scalars/jsonobject) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Asset.<b>collateral</b></code>](#)<Bullet />[`Collateral`](/docs/api/objects/collateral) <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Asset.<b>addresses</b></code>](#)<Bullet />[`[Address]`](/docs/api/objects/address) <Badge class="secondary" text="list"/> <Badge class="secondary" text="object"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Asset.<b>action</b></code>](#)<Bullet />[`Action`](/docs/api/objects/action) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+### Returned by
+
+[`asset`](/docs/api/queries/asset)  <Badge class="secondary" text="query"/><Bullet />[`createAsset`](/docs/api/mutations/create-asset)  <Badge class="secondary" text="mutation"/><Bullet />[`updateAsset`](/docs/api/mutations/update-asset)  <Badge class="secondary" text="mutation"/>
+
+### Member of
+
+[`Assets`](/docs/api/objects/assets)  <Badge class="secondary" text="object"/><Bullet />[`Collateral`](/docs/api/objects/collateral)  <Badge class="secondary" text="object"/><Bullet />[`Outcome`](/docs/api/objects/outcome)  <Badge class="secondary" text="object"/>
+
+
+

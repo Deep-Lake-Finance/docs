@@ -1,0 +1,53 @@
+---
+id: organization-where-input
+title: OrganizationWhereInput
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+input OrganizationWhereInput {
+  id: String
+  name: String
+  logo: String
+  webhooks: [WebhookWhereInput]
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>OrganizationWhereInput.<b>id</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>OrganizationWhereInput.<b>name</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>OrganizationWhereInput.<b>logo</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>OrganizationWhereInput.<b>webhooks</b></code>](#)<Bullet />[`[WebhookWhereInput]`](/docs/api/inputs/webhook-where-input) <Badge class="secondary" text="list"/> <Badge class="secondary" text="input"/>
+> 
+> 
+
+
+
+### Member of
+
+[`EscrowWhereInput`](/docs/api/inputs/escrow-where-input)  <Badge class="secondary" text="input"/><Bullet />[`LiquidityWhereInput`](/docs/api/inputs/liquidity-where-input)  <Badge class="secondary" text="input"/><Bullet />[`organization`](/docs/api/queries/organization)  <Badge class="secondary" text="query"/><Bullet />[`organizations`](/docs/api/queries/organizations)  <Badge class="secondary" text="query"/><Bullet />[`updateOrganization`](/docs/api/mutations/update-organization)  <Badge class="secondary" text="mutation"/><Bullet />[`UserWhereInput`](/docs/api/inputs/user-where-input)  <Badge class="secondary" text="input"/><Bullet />[`WebhookDataInput`](/docs/api/inputs/webhook-data-input)  <Badge class="secondary" text="input"/><Bullet />[`WebhookWhereInput`](/docs/api/inputs/webhook-where-input)  <Badge class="secondary" text="input"/>
+
+
+

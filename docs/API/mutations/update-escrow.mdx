@@ -1,0 +1,45 @@
+---
+id: update-escrow
+title: updateEscrow
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+updateEscrow(
+  where: EscrowWhereInput
+  data: EscrowDataInput
+): Escrow
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>updateEscrow.<b>where</b></code>](#)<Bullet />[`EscrowWhereInput`](/docs/api/inputs/escrow-where-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>updateEscrow.<b>data</b></code>](#)<Bullet />[`EscrowDataInput`](/docs/api/inputs/escrow-data-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+### Type
+
+#### [`Escrow`](/docs/api/objects/escrow) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+
+

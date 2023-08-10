@@ -1,0 +1,45 @@
+---
+id: tvl
+title: tvl
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+tvl(
+  where: LiquidityWhereInput
+  lt: LiquidityWhereInput
+): Liquidity
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>tvl.<b>where</b></code>](#)<Bullet />[`LiquidityWhereInput`](/docs/api/inputs/liquidity-where-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>tvl.<b>lt</b></code>](#)<Bullet />[`LiquidityWhereInput`](/docs/api/inputs/liquidity-where-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+### Type
+
+#### [`Liquidity`](/docs/api/objects/liquidity) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+
+

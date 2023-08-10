@@ -1,0 +1,70 @@
+---
+id: assets
+title: assets
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+assets(
+  where: AssetWhereInput
+  take: Int
+  skip: Int
+  gt: AssetWhereInput
+  lt: AssetWhereInput
+  like: AssetWhereInput
+  orderBy: [JSONObject]
+): Assets
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>assets.<b>where</b></code>](#)<Bullet />[`AssetWhereInput`](/docs/api/inputs/asset-where-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>assets.<b>take</b></code>](#)<Bullet />[`Int`](/docs/api/scalars/int) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>assets.<b>skip</b></code>](#)<Bullet />[`Int`](/docs/api/scalars/int) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>assets.<b>gt</b></code>](#)<Bullet />[`AssetWhereInput`](/docs/api/inputs/asset-where-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>assets.<b>lt</b></code>](#)<Bullet />[`AssetWhereInput`](/docs/api/inputs/asset-where-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>assets.<b>like</b></code>](#)<Bullet />[`AssetWhereInput`](/docs/api/inputs/asset-where-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>assets.<b>orderBy</b></code>](#)<Bullet />[`[JSONObject]`](/docs/api/scalars/jsonobject) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+### Type
+
+#### [`Assets`](/docs/api/objects/assets) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+
+

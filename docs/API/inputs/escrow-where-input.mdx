@@ -1,0 +1,78 @@
+---
+id: escrow-where-input
+title: EscrowWhereInput
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+input EscrowWhereInput {
+  id: String
+  startDate: String
+  endDate: String
+  publicKey: String
+  hex: String
+  cets: [CetWhereInput]
+  collateral: CollateralWhereInput
+  transactions: [TransactionWhereInput]
+  organization: OrganizationWhereInput
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>EscrowWhereInput.<b>id</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EscrowWhereInput.<b>startDate</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EscrowWhereInput.<b>endDate</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EscrowWhereInput.<b>publicKey</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EscrowWhereInput.<b>hex</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EscrowWhereInput.<b>cets</b></code>](#)<Bullet />[`[CetWhereInput]`](/docs/api/inputs/cet-where-input) <Badge class="secondary" text="list"/> <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EscrowWhereInput.<b>collateral</b></code>](#)<Bullet />[`CollateralWhereInput`](/docs/api/inputs/collateral-where-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EscrowWhereInput.<b>transactions</b></code>](#)<Bullet />[`[TransactionWhereInput]`](/docs/api/inputs/transaction-where-input) <Badge class="secondary" text="list"/> <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>EscrowWhereInput.<b>organization</b></code>](#)<Bullet />[`OrganizationWhereInput`](/docs/api/inputs/organization-where-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+
+
+### Member of
+
+[`AddressWhereInput`](/docs/api/inputs/address-where-input)  <Badge class="secondary" text="input"/><Bullet />[`CollateralWhereInput`](/docs/api/inputs/collateral-where-input)  <Badge class="secondary" text="input"/><Bullet />[`escrow`](/docs/api/queries/escrow)  <Badge class="secondary" text="query"/><Bullet />[`escrows`](/docs/api/queries/escrows)  <Badge class="secondary" text="query"/><Bullet />[`executeEscrow`](/docs/api/mutations/execute-escrow)  <Badge class="secondary" text="mutation"/><Bullet />[`FeeWhereInput`](/docs/api/inputs/fee-where-input)  <Badge class="secondary" text="input"/><Bullet />[`LiquidityWhereInput`](/docs/api/inputs/liquidity-where-input)  <Badge class="secondary" text="input"/><Bullet />[`updateEscrow`](/docs/api/mutations/update-escrow)  <Badge class="secondary" text="mutation"/>
+
+
+

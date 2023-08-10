@@ -1,0 +1,52 @@
+---
+id: product
+title: Product
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+type Product {
+  id: String
+  name: String
+  type: String
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>Product.<b>id</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Product.<b>name</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>Product.<b>type</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+
+
+### Returned by
+
+[`createProduct`](/docs/api/mutations/create-product)  <Badge class="secondary" text="mutation"/><Bullet />[`product`](/docs/api/queries/product)  <Badge class="secondary" text="query"/>
+
+### Member of
+
+[`Action`](/docs/api/objects/action)  <Badge class="secondary" text="object"/><Bullet />[`Key`](/docs/api/objects/key)  <Badge class="secondary" text="object"/><Bullet />[`Products`](/docs/api/objects/products)  <Badge class="secondary" text="object"/>
+
+
+

@@ -1,0 +1,45 @@
+---
+id: update-cet
+title: updateCet
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+updateCet(
+  where: CetWhereInput
+  data: CetDataInput
+): Cet
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>updateCet.<b>where</b></code>](#)<Bullet />[`CetWhereInput`](/docs/api/inputs/cet-where-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>updateCet.<b>data</b></code>](#)<Bullet />[`CetDataInput`](/docs/api/inputs/cet-data-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+### Type
+
+#### [`Cet`](/docs/api/objects/cet) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+
+

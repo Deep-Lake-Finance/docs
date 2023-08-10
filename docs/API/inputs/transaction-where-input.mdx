@@ -1,0 +1,68 @@
+---
+id: transaction-where-input
+title: TransactionWhereInput
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+input TransactionWhereInput {
+  id: String
+  hex: String
+  type: String
+  base64: String
+  txid: String
+  inputs: Int
+  outputs: Int
+}
+```
+
+
+### Fields
+
+#### [<code style={{ fontWeight: 'normal' }}>TransactionWhereInput.<b>id</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TransactionWhereInput.<b>hex</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TransactionWhereInput.<b>type</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TransactionWhereInput.<b>base64</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TransactionWhereInput.<b>txid</b></code>](#)<Bullet />[`String`](/docs/api/scalars/string) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TransactionWhereInput.<b>inputs</b></code>](#)<Bullet />[`Int`](/docs/api/scalars/int) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>TransactionWhereInput.<b>outputs</b></code>](#)<Bullet />[`Int`](/docs/api/scalars/int) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+
+
+### Member of
+
+[`CetWhereInput`](/docs/api/inputs/cet-where-input)  <Badge class="secondary" text="input"/><Bullet />[`EscrowWhereInput`](/docs/api/inputs/escrow-where-input)  <Badge class="secondary" text="input"/>
+
+
+

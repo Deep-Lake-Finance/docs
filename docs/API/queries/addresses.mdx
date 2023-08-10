@@ -1,0 +1,70 @@
+---
+id: addresses
+title: addresses
+hide_table_of_contents: false
+---
+
+
+
+export const Bullet = () => <><span style={{ fontWeight: 'normal', fontSize: '.5em', color: 'var(--ifm-color-secondary-darkest)' }}>&nbsp;●&nbsp;</span></>
+
+export const SpecifiedBy = (props) => <>Specification<a className="link" style={{ fontSize:'1.5em', paddingLeft:'4px' }} target="_blank" href={props.url} title={'Specified by ' + props.url}>⎘</a></>
+
+export const Badge = (props) => <><span class={'badge badge--' + props.class}>{props.text}</span></>
+
+
+No description
+
+```graphql
+addresses(
+  where: AddressWhereInput
+  take: Int
+  skip: Int
+  gt: AddressWhereInput
+  lt: AddressWhereInput
+  like: AddressWhereInput
+  orderBy: [JSONObject]
+): Addresses
+```
+
+
+### Arguments
+
+#### [<code style={{ fontWeight: 'normal' }}>addresses.<b>where</b></code>](#)<Bullet />[`AddressWhereInput`](/docs/api/inputs/address-where-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>addresses.<b>take</b></code>](#)<Bullet />[`Int`](/docs/api/scalars/int) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>addresses.<b>skip</b></code>](#)<Bullet />[`Int`](/docs/api/scalars/int) <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>addresses.<b>gt</b></code>](#)<Bullet />[`AddressWhereInput`](/docs/api/inputs/address-where-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>addresses.<b>lt</b></code>](#)<Bullet />[`AddressWhereInput`](/docs/api/inputs/address-where-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>addresses.<b>like</b></code>](#)<Bullet />[`AddressWhereInput`](/docs/api/inputs/address-where-input) <Badge class="secondary" text="input"/>
+> 
+> 
+
+#### [<code style={{ fontWeight: 'normal' }}>addresses.<b>orderBy</b></code>](#)<Bullet />[`[JSONObject]`](/docs/api/scalars/jsonobject) <Badge class="secondary" text="list"/> <Badge class="secondary" text="scalar"/>
+> 
+> 
+
+### Type
+
+#### [`Addresses`](/docs/api/objects/addresses) <Badge class="secondary" text="object"/>
+> 
+> 
+
+
+
+
+
