@@ -1,4 +1,6 @@
-
+---
+sidebar_position: 1
+---
 # Use Cases - Ordinal Lending
 
 > Creating an Ordinal lending protocol using Bitcoin Discreet Log Contracts (DLC) involves designing a trust-minimized
@@ -42,61 +44,10 @@ When combined with the Deep Lake Oracle, the above scenario provides a trust-min
 
 ## Considerations
 
-> REQUIRED STATEMENT: Include the following statement to introduce this section:
+## Security
 
+## Try this scenario
 
-> Are there any lessons learned from running this that would be helpful for new customers?  What went wrong when building it out?  What went right?
-> How do I need to think about managing, maintaining, and monitoring this long term?
-> REQUIREMENTS:
-> You must include the "Cost optimization" section.
-> You must include at least two of the other H3 sub-sections/pillars: Reliability, Security, Operational excellence, and Performance efficiency.
-
-### Reliability
-
-### Security
-
-> REQUIRED STATEMENT: If using this section, include the following statement to introduce the section:
-### Cost optimization
-
-> REQUIRED: This section is required.
-> REQUIRED STATEMENT: Include the following statement to introduce the section:
-
-Cost optimization is about looking at ways to reduce unnecessary expenses and improve operational efficiencies. For more information, see [Overview of the cost optimization pillar].
-
-> How much will this cost to run? See if you can answer this without dollar amounts.
-> Are there ways I could save cost?
-> If it scales linearly, than we should break it down by cost/unit. If it does not, why?
-> What are the components that make up the cost?
-> How does scale affect the cost?
-> Link to the pricing calculator (<https://azure.microsoft.com/pricing/calculator>) with all of the components in the architecture included.
-> If it makes sense, include small/medium/large configurations. Describe what needs to be changed as you move to larger sizes.
-
-### Operational excellence
-
-> REQUIRED STATEMENT: If using this section, include the following statement to introduce the section:
-
-Operational excellence covers the operations processes that deploy an application and keep it running in production. For more information, see [Overview of the operational excellence pillar].
-
-> This includes DevOps, monitoring, and diagnostics considerations.
-> How do I need to think about operating this solution?
-
-### Performance efficiency
-
-> REQUIRED STATEMENT: If using this section, include the following statement to introduce the section:
-
-Performance efficiency is the ability of your workload to scale to meet the demands placed on it by users in an efficient manner. For more information, see [Performance efficiency pillar overview].
-
-> This includes scalability considerations.
-> Are there any key performance considerations (past the typical)?
-> Are there any size considerations around this specific solution? What scale does this work at? At what point do things break or not make sense for this architecture?
-
-## Deploy this scenario
-
-> (Optional, but greatly encouraged)
-> Is there an example deployment that can show me this in action?  What would I need to change to run this in production?
-
-## Contributors
-
-## Next steps
+> Here we include a link to a graphql collection with some preset values
 
 ## Related resources
