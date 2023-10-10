@@ -16,29 +16,29 @@ type Query {
   action(where: ActionWhereInput): Action
   addresses(where: AddressWhereInput, take: Int, skip: Int, gt: AddressWhereInput, lt: AddressWhereInput, like: AddressWhereInput, orderBy: [JSONObject]): Addresses
   address(where: AddressWhereInput): Address
-  board: JSONObject
   assets(where: AssetWhereInput, take: Int, skip: Int, gt: AssetWhereInput, lt: AssetWhereInput, like: AssetWhereInput, orderBy: [JSONObject]): Assets
   asset(where: AssetWhereInput): Asset
-  cets(where: CetWhereInput, take: Int, skip: Int, gt: CetWhereInput, lt: CetWhereInput, like: CetWhereInput, orderBy: [JSONObject]): Cets
-  cet(where: CetWhereInput): Cet
+  blocks(where: BlockWhereInput, take: Int, skip: Int, gt: BlockWhereInput, lt: BlockWhereInput, like: BlockWhereInput, orderBy: [JSONObject]): Blocks
+  block(where: BlockWhereInput): Block
   collaterals(where: CollateralWhereInput, take: Int, skip: Int, gt: CollateralWhereInput, lt: ActionWhereInput, like: ActionWhereInput, orderBy: [JSONObject]): Actions
   collateral(where: ActionWhereInput): Collateral
-  discount(where: DiscountWhereInput): Discount
   escrows(where: EscrowWhereInput, take: Int, skip: Int, gt: EscrowWhereInput, lt: EscrowWhereInput, like: EscrowWhereInput, orderBy: [JSONObject]): Escrows
   escrow(where: EscrowWhereInput): Escrow
   fee(where: FeeWhereInput): Fee
-  holdings(where: HoldingWhereInput, take: Int, skip: Int, gt: HoldingWhereInput, lt: HoldingWhereInput, like: HoldingWhereInput, orderBy: [JSONObject]): Holdings
+  flows(where: FlowWhereInput, take: Int, skip: Int, gt: FlowWhereInput, lt: FlowWhereInput, like: FlowWhereInput, orderBy: [JSONObject]): Flows
+  flow(where: FlowWhereInput): Flow
   key(where: KeyWhereInput): Key
+  legs(where: LegWhereInput, take: Int, skip: Int, gt: LegWhereInput, lt: LegWhereInput, like: LegWhereInput, orderBy: [JSONObject]): Legs
+  leg(where: LegWhereInput): Leg
   tvl(where: LiquidityWhereInput, lt: LiquidityWhereInput): Liquidity
   organizations(where: OrganizationWhereInput, take: Int, skip: Int, gt: OrganizationWhereInput, lt: OrganizationWhereInput, like: OrganizationWhereInput, orderBy: [JSONObject]): Organizations
   organization(where: OrganizationWhereInput): Organization
   outcomes(where: OutcomeWhereInput, take: Int, skip: Int, gt: OutcomeWhereInput, lt: OutcomeWhereInput, like: OutcomeWhereInput, orderBy: [JSONObject]): Outcomes
   outcome(where: OutcomeWhereInput): Outcome
-  positions(where: PositionWhereInput, take: Int, skip: Int, gt: PositionWhereInput, lt: PositionWhereInput, like: PositionWhereInput, orderBy: [JSONObject]): Positions
   products(where: ProductWhereInput, take: Int, skip: Int, gt: ProductWhereInput, lt: ProductWhereInput, like: ProductWhereInput, orderBy: [JSONObject]): Products
   product(where: ProductWhereInput): Product
-  signatures(where: SignatureWhereInput, take: Int, skip: Int, gt: SignatureWhereInput, lt: SignatureWhereInput, like: SignatureWhereInput, orderBy: [JSONObject]): Signatures
-  signature(where: SignatureWhereInput): Signature
+  transactions(where: TransactionWhereInput, take: Int, skip: Int, gt: TransactionWhereInput, lt: TransactionWhereInput, like: TransactionWhereInput, orderBy: [JSONObject]): Transactions
+  transaction(where: TransactionWhereInput): Transaction
   users(where: UserWhereInput, take: Int, skip: Int, like: JSONObject): Users
   user(where: UserWhereInput): User
   profile: User
@@ -48,16 +48,12 @@ type Query {
 
 type Subscription {
   balanceUpdated(where: AccountWhereInput): Account
-  positionAdded(where: PositionWhereInput): Position
-  positionUpdated(where: PositionWhereInput): Position
 }
 
 type Action {
   id: String!
   type: String
   configuration: JSONObject
-  outcomes: [Outcome]
-  product: Product
 }
 
 type Actions {
@@ -69,15 +65,12 @@ input ActionWhereInput {
   id: String
   type: String
   configuration: JSONObject
-  product: ProductWhereInput
 }
 
 input ActionDataInput {
   id: String
   type: String
-  outcomes: [OutcomeDataInput]
   configuration: JSONObject
-  product: ProductDataInput
 }
 
 type Mutation {
@@ -88,20 +81,23 @@ type Mutation {
   updateAddress(data: AddressDataInput, where: AddressWhereInput): Address
   createAsset(data: AssetDataInput): Asset
   updateAsset(data: AssetDataInput, where: AssetWhereInput): Asset
-  updateCet(where: CetWhereInput, data: CetDataInput): Cet
+  indexBlock(where: BlockWhereInput): Block
   createCollateral(data: CollateralDataInput): Collateral
   updateCollateral(where: CollateralWhereInput, data: CollateralDataInput): Collateral
-  claim(data: DiscountWhereInput): Discount
   createEscrow(data: EscrowDataInput): Escrow
   updateEscrow(where: EscrowWhereInput, data: EscrowDataInput): Escrow
   broadcastEscrow(data: EscrowDataInput): Escrow
   executeEscrow(where: EscrowWhereInput): Escrow
+  executeFlow(where: JSONObject, data: JSONObject): Flow
   createOrganization(data: OrganizationDataInput): Organization
   updateOrganization(data: OrganizationDataInput, where: OrganizationWhereInput): Organization
-  createOutcome(data: OutcomeWhereInput): Outcome
-  executeOutcome(where: OutcomeWhereInput, data: OutcomeDataInput): Outcome
+  createOutcome(data: OutcomeDataInput): Outcome
+  checkOutcome(where: OutcomeWhereInput): Outcome
+  sign(where: OutcomeWhereInput): Outcome
   createProduct(data: ProductDataInput): Product
+  buildSignature(where: SignatureWhereInput): Signature
   executeSignature(where: SignatureWhereInput, data: SignatureDataInput): Signature
+  updateTransaction(where: TransactionWhereInput, data: TransactionDataInput): Transaction
   addUser(data: UserDataInput): User
   updateUser(where: UserWhereInput, data: UserDataInput): User
   deleteUser(where: UserWhereInput): User
@@ -141,12 +137,38 @@ input AddressDataInput {
   escrow: EscrowDataInput
 }
 
+type Meta {
+  amount: String
+}
+
+input MetaWhereInput {
+  amount: String
+}
+
+input MetaDataInput {
+  amount: String
+}
+
+type Content {
+  meta: JSONObject
+  node: JSONObject
+}
+
+input ContentWhereInput {
+  meta: JSONObject
+  node: JSONObject
+}
+
+input ContentDataInput {
+  meta: JSONObject
+  node: JSONObject
+}
+
 type Asset {
   id: String!
   type: String
-  amount: String
   usdValue: String
-  content: JSONObject
+  content: Content
   collateral: Collateral
   addresses: [Address]
   action: Action
@@ -160,9 +182,8 @@ type Assets {
 input AssetWhereInput {
   id: String
   type: String
-  amount: String
   usdValue: String
-  content: JSONObject
+  content: ContentWhereInput
   collateral: CollateralWhereInput
   addresses: [AddressWhereInput]
   action: ActionWhereInput
@@ -171,35 +192,30 @@ input AssetWhereInput {
 input AssetDataInput {
   id: String
   type: String
-  amount: String
   usdValue: String
-  content: JSONObject
+  content: ContentDataInput
   collateral: CollateralDataInput
   addresses: [AddressDataInput]
   action: ActionDataInput
 }
 
-type Cet {
-  id: String!
-  transactions: [Transaction]
-  collateral: Collateral
+type Block {
+  id: String
+  indexed: Boolean
 }
 
-type Cets {
-  data: [Cet]
+type Blocks {
+  data: [Block]
   count: Int
 }
 
-input CetWhereInput {
+input BlockWhereInput {
   id: String
-  transactions: [TransactionWhereInput]
-  collateral: CollateralWhereInput
+  indexed: Boolean
 }
 
-input CetDataInput {
+input BlockDataInput {
   id: String
-  transactions: [TransactionDataInput]
-  collateral: CollateralDataInput
 }
 
 type Collateral {
@@ -227,10 +243,11 @@ input CollateralDataInput {
 
 type Condition {
   id: ID
-  leftOperand: JSONObject
-  rightOperand: JSONObject
-  operation: String
+  filter: JSONObject
+  module: String
   outcome: Outcome
+  transaction: Transaction
+  verification: Verification
 }
 
 type Conditions {
@@ -240,38 +257,31 @@ type Conditions {
 
 input ConditionWhereInput {
   id: ID
-  leftOperand: JSONObject
-  rightOperand: JSONObject
-  operation: String
+  filter: JSONObject
+  module: String
   outcome: OutcomeWhereInput
+  verification: VerificationWhereInput
 }
 
 input ConditionDataInput {
   id: ID
-  leftOperand: JSONObject
-  rightOperand: JSONObject
-  operation: String
+  filter: JSONObject
+  module: String
   outcome: OutcomeWhereInput
-}
-
-type Discount {
-  id: String!
-  wallet: String
-}
-
-input DiscountWhereInput {
-  id: String
-  wallet: String
+  transaction: TransactionDataInput
+  verification: VerificationDataInput
 }
 
 type Escrow {
   id: String!
   startDate: String
   endDate: String
-  hex: String
-  cets: [Cet]
+  status: String
   collateral: Collateral
+  meta: JSONObject
   transactions: [Transaction]
+  sides: [Side]
+  product: Product
 }
 
 type Escrows {
@@ -283,23 +293,22 @@ input EscrowWhereInput {
   id: String
   startDate: String
   endDate: String
-  publicKey: String
-  hex: String
-  cets: [CetWhereInput]
+  status: String
   collateral: CollateralWhereInput
   transactions: [TransactionWhereInput]
   organization: OrganizationWhereInput
+  product: ProductWhereInput
 }
 
 input EscrowDataInput {
   id: String
   startDate: String
   endDate: String
-  publicKey: String
-  hex: String
-  cets: [CetWhereInput]
+  status: String
+  meta: JSONObject
   collateral: CollateralDataInput
   transactions: [TransactionDataInput]
+  product: ProductDataInput
 }
 
 type Fee {
@@ -312,37 +321,70 @@ input FeeWhereInput {
   escrow: EscrowWhereInput
 }
 
-scalar JSONObject
-
-type Holding {
+type Flow {
   id: String!
-  user: String
-  type: String
-  amount: Int
-  collateralization: Int
-  status: String
-  holdingId: Int
+  escrows: [Escrow]
+  step: JSONObject
 }
 
-type Holdings {
-  data: [Holding]
+type Flows {
+  data: [Flow]
   count: Int
 }
 
-input HoldingWhereInput {
+input FlowWhereInput {
   id: String
-  user: String
-  type: String
+}
+
+input FlowDataInput {
+  id: String
 }
 
 type Key {
   id: ID!
+  value: String
   organization: Organization
   product: Product
 }
 
 input KeyWhereInput {
   id: ID
+  value: String
+  organization: OrganizationWhereInput
+  product: ProductWhereInput
+}
+
+input KeyDataInput {
+  id: ID
+  value: String
+  organization: OrganizationDataInput
+  product: ProductDataInput
+}
+
+type Leg {
+  id: String!
+  startDate: String
+  endDate: String
+  type: String
+  nature: String
+  activationDate: String
+  address: String
+  value: String
+}
+
+type Legs {
+  data: [Leg]
+  count: Int
+}
+
+input LegWhereInput {
+  id: String
+  startDate: String
+  endDate: String
+  type: String
+  nature: String
+  activationDate: String
+  address: String
   value: String
 }
 
@@ -387,11 +429,12 @@ input OrganizationDataInput {
 }
 
 type Outcome {
-  id: String!
+  id: String
   description: String
   tag: String
+  conditions: [Condition]
   signature: Signature
-  asset: Asset
+  block: Block
 }
 
 type Outcomes {
@@ -403,16 +446,18 @@ input OutcomeWhereInput {
   id: String
   description: String
   tag: String
+  conditions: [ConditionWhereInput]
+  block: BlockWhereInput
   signature: SignatureWhereInput
-  asset: AssetWhereInput
+  OR: [OutcomeWhereInput]
 }
 
 input OutcomeDataInput {
   id: String
   description: String
   tag: String
-  signature: SignatureDataInput
-  asset: AssetDataInput
+  conditions: [ConditionDataInput]
+  OR: [OutcomeDataInput]
 }
 
 type Party {
@@ -453,32 +498,11 @@ input PartyDataInput {
   final: JSONObject
 }
 
-type Position {
-  id: String
-  user: String
-  type: String
-  size: Float
-  support: Int
-  market: Int
-  entryPrice: Float
-  status: String
-  positionId: Int
-}
-
-type Positions {
-  data: [Position]
-  count: Int
-}
-
-input PositionWhereInput {
-  user: String
-  market: Int
-}
-
 type Product {
   id: String
   name: String
   type: String
+  key: Key
 }
 
 type Products {
@@ -490,19 +514,36 @@ input ProductWhereInput {
   id: String
   name: String
   type: String
+  key: KeyWhereInput
 }
 
 input ProductDataInput {
   id: String
   name: String
   type: String
+  key: KeyDataInput
+}
+
+scalar DateTime
+
+scalar EmailAddress
+
+scalar PhoneNumber
+
+scalar URL
+
+scalar JSONObject
+
+type Side {
+  id: String
+  movement: String
+  action: String
+  leaf: String
 }
 
 type Signature {
-  id: String
   publicKey: String
-  released: Boolean
-  outcome: Outcome
+  wif: String
 }
 
 type Signatures {
@@ -511,21 +552,17 @@ type Signatures {
 }
 
 input SignatureWhereInput {
-  id: String
-  value: String
   publicKey: String
-  released: Boolean
-  outcome: OutcomeWhereInput
+  wif: String
   OR: [SignatureWhereInput]
+  escrow: JSONObject
 }
 
 input SignatureDataInput {
-  id: String
-  value: String
   publicKey: String
-  released: Boolean
+  wif: String
   transactions: [TransactionDataInput]
-  OR: [SignatureDataInput]
+  escrow: JSONObject
 }
 
 type Transaction {
@@ -616,6 +653,35 @@ input UserCronInput {
 type Users {
   data: [User!]!
   count: Int!
+}
+
+type Verification {
+  id: ID
+  leftOperand: JSONObject
+  rightOperand: JSONObject
+  operation: String
+  condition: Condition
+}
+
+type Verifications {
+  data: [Verification]
+  count: Int!
+}
+
+input VerificationWhereInput {
+  id: ID
+  leftOperand: JSONObject
+  rightOperand: JSONObject
+  operation: String
+  condition: ConditionWhereInput
+}
+
+input VerificationDataInput {
+  id: ID
+  leftOperand: JSONObject
+  rightOperand: JSONObject
+  operation: String
+  condition: ConditionDataInput
 }
 
 type Webhook {
