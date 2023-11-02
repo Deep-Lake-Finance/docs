@@ -6,7 +6,7 @@
 ## Developers
 
 * [API Sandbox](developers/api-sandbox.md)
-* [API Reference](developers/api-reference.md)
+* [API Reference](developers/api/)
 
 ## Flagship Deep Lake Products
 
