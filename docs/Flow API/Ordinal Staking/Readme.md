@@ -34,7 +34,7 @@ After the successful completion of this request, you'll obtain a `flowId`. This 
 Ensure to securely store and manage the `flowId`, as it's essential for the rest of the loan process.
 
 
-## 2. Identify the Staking parameters
+## 2. Create Staking data and broadcast
 
 Ensure that you have the `flowId` from the flow creation step. This ID represents the specific flow that the staking pertains to. The staker must authenticate through platforms like Unisat, Leather, or XVerse. From this, gather:
 
