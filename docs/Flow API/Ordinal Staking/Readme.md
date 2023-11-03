@@ -94,7 +94,7 @@ The result of this is a `stakeTxn`.  `stakeTxn` is a PSBT that your user will ne
 const stakingBroadcastData = {
   where: { id: "FLOW_ID" },
   data: {
-    state: "broadcast-offer",
+    state: "broadcast-stake",
     transactions: [{ base64: "SIGNED_BASE64_VALUE" }],
   },
 };
