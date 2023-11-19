@@ -17,14 +17,14 @@ The Deep Lake API uses a number of safeguards to help maximize its stability and
 ```
 const headers = { Authorization: MY_COMPANY_API_KEY };
 const data = {
-type: "max-amount-per-asset"
-limitItems: [{ value: { amount: 1000000 } }]
+  type: "max-amount-per-asset"
+  limitItems: [{ value: { amount: 1000000 } }]
 };
 
 const { data: escrow } = await axios.post(
-`${DEEP_LAKE_REST_API_URL}/limits`,
-data,
-{ headers}
+  `${DEEP_LAKE_REST_API_URL}/limits`,
+  data,
+  { headers}
 );
 ```
 
