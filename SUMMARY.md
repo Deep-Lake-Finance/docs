@@ -3,7 +3,7 @@
 * [Welcome to Deep Lake](README.md)
 * [Introduction](introduction.md)
 
-## Deep Lake API
+## Deep Lake Bitcoin API
 
 * [API Overview](deep-lake-api/api.md)
 * [API Reference](deep-lake-api/reference.md)
