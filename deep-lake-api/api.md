@@ -2,9 +2,7 @@
 description: Deep Lake's API makes native Bitcoin operations accessible.
 ---
 
-# API Overview
-
-Deep Lake's API makes native Bitcoin operations accessible.
+# Overview
 
 Contact: [support@deeplake.fi](mailto:support@deeplake.fi)
 
