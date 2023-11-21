@@ -6,7 +6,9 @@
 ## Deep Lake API
 
 * [API Overview](deep-lake-api/api.md)
-
+* [API Reference](deep-lake-api/reference.md)
+* [Limtis](deep-lake-api/Limits.md)
+  
 ## Flagship Deep Lake Products
 
 * ["Easy Escrow" - Native BTC Liquidity & PoR](flagship-deep-lake-products/easy-escrow-native-btc-liquidity-and-por/README.md)
