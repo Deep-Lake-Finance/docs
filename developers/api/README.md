@@ -2,25 +2,23 @@
 
 Deep Lake's API makes native Bitcoin operations accessible.
 
-<u>Contact</u>
+    <u>Contact</u>
 
-[support@deeplake.fi](mailto:support@deeplake.fi)
+    [support@deeplake.fi](mailto:support@deeplake.fi)
 
-<u>License</u>
+    <u>License</u>
 
-Apache 2.0
+    [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0.html)
 
-[https://www.apache.org/licenses/LICENSE-2.0.html](https://www.apache.org/licenses/LICENSE-2.0.html)
+    <u>Terms of Service</u>
 
-<u>Terms of Service</u>
-
-[https://deeplake.fi/terms](https://deeplake.fi/terms)
+    [https://deeplake.fi/terms](https://deeplake.fi/terms)
 
 #### API Endpoints
 
   Production environment. Mainnet Bitcoin.  Requires a production API key.:
 
-  <https://api.deeplake.fi/graphql>
+  https://api.deeplake.fi/graphql
 
   Staging environment.  Warning Mainnet Bitcoin.  Requires a staging API key.:
   
@@ -36,4 +34,4 @@ To find out about safeguards available to the assets you make available via our 
 
 ### API Sandbox
 
-    Simply [**click here to open the sandbox**](https://studio.apollographql.com/public/Deep-Lake-Graph/variant/current/explorer) with the Deep Lake API pre-loaded.
+Simply [**click here to open the sandbox**](https://studio.apollographql.com/public/Deep-Lake-Graph/variant/current/explorer) with the Deep Lake API pre-loaded.
