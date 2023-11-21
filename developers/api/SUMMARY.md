@@ -1,128 +1,237 @@
 #### Introduction
 
-*   [Welcome](#introduction)
+[Welcome](./reference.md#introduction)
 
-#### Operations
+#### Deep Lake API
 
-##### [Queries](#group-Operations-Queries)
+##### Queries
     
-    *   [action](#query-action)
-    *   [actions](#query-actions)
-    *   [address](#query-address)
-    *   [addresses](#query-addresses)
-    *   [asset](#query-asset)
-    *   [assets](#query-assets)
-    *   [balance](#query-balance)
-    *   [block](#query-block)
-    *   [blocks](#query-blocks)
-    *   [collateral](#query-collateral)
-    *   [collaterals](#query-collaterals)
-    *   [element](#query-element)
-    *   [elements](#query-elements)
-    *   [escrow](#query-escrow)
-    *   [escrows](#query-escrows)
-    *   [fee](#query-fee)
-    *   [flow](#query-flow)
-    *   [flows](#query-flows)
-    *   [leg](#query-leg)
-    *   [legs](#query-legs)
-    *   [outcome](#query-outcome)
-    *   [outcomes](#query-outcomes)
-    *   [transaction](#query-transaction)
-    *   [transactions](#query-transactions)
-    *   [tvl](#query-tvl)
+[action](./reference.md#query-action)
 
-##### [Mutations](#group-Operations-Mutations)
-    
-    *   [broadcastEscrow](#mutation-broadcastEscrow)
-    *   [buildSignature](#mutation-buildSignature)
-    *   [checkOutcome](#mutation-checkOutcome)
-    *   [createAction](#mutation-createAction)
-    *   [createAddress](#mutation-createAddress)
-    *   [createAsset](#mutation-createAsset)
-    *   [createCollateral](#mutation-createCollateral)
-    *   [createElement](#mutation-createElement)
-    *   [createEscrow](#mutation-createEscrow)
-    *   [createOutcome](#mutation-createOutcome)
-    *   [executeAction](#mutation-executeAction)
-    *   [executeEscrow](#mutation-executeEscrow)
-    *   [executeFlow](#mutation-executeFlow)
-    *   [executeSignature](#mutation-executeSignature)
-    *   [indexBlock](#mutation-indexBlock)
-    *   [sign](#mutation-sign)
-    *   [updateAddress](#mutation-updateAddress)
-    *   [updateAsset](#mutation-updateAsset)
-    *   [updateCollateral](#mutation-updateCollateral)
-    *   [updateElement](#mutation-updateElement)
-    *   [updateTransaction](#mutation-updateTransaction)
+[actions](./reference.md#query-actions)
 
-##### [Subscriptions](#group-Operations-Subscriptions)
-    
-    *   [balanceUpdated](#subscription-balanceUpdated)
+[address](./reference.md#query-address)
 
-#### Types
+[addresses](./reference.md#query-addresses)
 
-*   [Account](#definition-Account)
-*   [AccountWhereInput](#definition-AccountWhereInput)
-*   [Action](#definition-Action)
-*   [ActionDataInput](#definition-ActionDataInput)
-*   [ActionWhereInput](#definition-ActionWhereInput)
-*   [Actions](#definition-Actions)
-*   [Address](#definition-Address)
-*   [AddressDataInput](#definition-AddressDataInput)
-*   [AddressWhereInput](#definition-AddressWhereInput)
-*   [Addresses](#definition-Addresses)
-*   [Asset](#definition-Asset)
-*   [AssetDataInput](#definition-AssetDataInput)
-*   [AssetWhereInput](#definition-AssetWhereInput)
-*   [Assets](#definition-Assets)
-*   [Block](#definition-Block)
-*   [BlockWhereInput](#definition-BlockWhereInput)
-*   [Blocks](#definition-Blocks)
-*   [Boolean](#definition-Boolean)
-*   [Collateral](#definition-Collateral)
-*   [CollateralDataInput](#definition-CollateralDataInput)
-*   [CollateralWhereInput](#definition-CollateralWhereInput)
-*   [Condition](#definition-Condition)
-*   [ConditionDataInput](#definition-ConditionDataInput)
-*   [ConditionWhereInput](#definition-ConditionWhereInput)
-*   [Content](#definition-Content)
-*   [ContentDataInput](#definition-ContentDataInput)
-*   [ContentWhereInput](#definition-ContentWhereInput)
-*   [Element](#definition-Element)
-*   [ElementDataInput](#definition-ElementDataInput)
-*   [ElementWhereInput](#definition-ElementWhereInput)
-*   [Elements](#definition-Elements)
-*   [Escrow](#definition-Escrow)
-*   [EscrowDataInput](#definition-EscrowDataInput)
-*   [EscrowWhereInput](#definition-EscrowWhereInput)
-*   [Escrows](#definition-Escrows)
-*   [Fee](#definition-Fee)
-*   [FeeWhereInput](#definition-FeeWhereInput)
-*   [Flow](#definition-Flow)
-*   [FlowWhereInput](#definition-FlowWhereInput)
-*   [Flows](#definition-Flows)
-*   [ID](#definition-ID)
-*   [Int](#definition-Int)
-*   [JSONObject](#definition-JSONObject)
-*   [Leg](#definition-Leg)
-*   [LegWhereInput](#definition-LegWhereInput)
-*   [Legs](#definition-Legs)
-*   [Liquidity](#definition-Liquidity)
-*   [LiquidityWhereInput](#definition-LiquidityWhereInput)
-*   [Outcome](#definition-Outcome)
-*   [OutcomeDataInput](#definition-OutcomeDataInput)
-*   [OutcomeWhereInput](#definition-OutcomeWhereInput)
-*   [Outcomes](#definition-Outcomes)
-*   [Side](#definition-Side)
-*   [Signature](#definition-Signature)
-*   [SignatureDataInput](#definition-SignatureDataInput)
-*   [SignatureWhereInput](#definition-SignatureWhereInput)
-*   [String](#definition-String)
-*   [Transaction](#definition-Transaction)
-*   [TransactionDataInput](#definition-TransactionDataInput)
-*   [TransactionWhereInput](#definition-TransactionWhereInput)
-*   [Transactions](#definition-Transactions)
-*   [Verification](#definition-Verification)
-*   [VerificationDataInput](#definition-VerificationDataInput)
-*   [VerificationWhereInput](#definition-VerificationWhereInput)
+[asset](./reference.md#query-asset)
+
+[assets](./reference.md#query-assets)
+
+[balance](./reference.md#query-balance)
+
+[block](./reference.md#query-block)
+
+[blocks](./reference.md#query-blocks)
+
+[collateral](./reference.md#query-collateral)
+
+[collaterals](./reference.md#query-collaterals)
+
+[element](./reference.md#query-element)
+
+[elements](./reference.md#query-elements)
+
+[escrow](./reference.md#query-escrow)
+
+[escrows](./reference.md#query-escrows)
+
+[fee](./reference.md#query-fee)
+
+[flow](./reference.md#query-flow)
+
+[flows](./reference.md#query-flows)
+
+[leg](./reference.md#query-leg)
+
+[legs](./reference.md#query-legs)
+
+[outcome](./reference.md#query-outcome)
+
+[outcomes](./reference.md#query-outcomes)
+
+[transaction](./reference.md#query-transaction)
+
+[transactions](./reference.md#query-transactions)
+
+[tvl](./reference.md#query-tvl)
+
+
+##### Mutations
+
+[broadcastEscrow](./reference.md#mutation-broadcastEscrow)
+
+[buildSignature](./reference.md#mutation-buildSignature)
+
+[checkOutcome](./reference.md#mutation-checkOutcome)
+
+[createAction](./reference.md#mutation-createAction)
+
+[createAddress](./reference.md#mutation-createAddress)
+
+[createAsset](./reference.md#mutation-createAsset)
+
+[createCollateral](./reference.md#mutation-createCollateral)
+
+[createElement](./reference.md#mutation-createElement)
+
+[createEscrow](./reference.md#mutation-createEscrow)
+
+[createOutcome](./reference.md#mutation-createOutcome)
+
+[executeAction](./reference.md#mutation-executeAction)
+
+[executeEscrow](./reference.md#mutation-executeEscrow)
+
+[executeFlow](./reference.md#mutation-executeFlow)
+
+[executeSignature](./reference.md#mutation-executeSignature)
+
+[indexBlock](./reference.md#mutation-indexBlock)
+
+[sign](./reference.md#mutation-sign)
+
+[updateAddress](./reference.md#mutation-updateAddress)
+
+[updateAsset](./reference.md#mutation-updateAsset)
+
+[updateCollateral](./reference.md#mutation-updateCollateral)
+
+[updateElement](./reference.md#mutation-updateElement)
+
+[updateTransaction](./reference.md#mutation-updateTransaction)
+
+
+##### Subscriptions
+
+[balanceUpdated](./reference.md#subscription-balanceUpdated)
+
+##### Types
+
+[Account](./reference.md#definition-Account)
+
+[AccountWhereInput](./reference.md#definition-AccountWhereInput)
+
+[Action](./reference.md#definition-Action)
+
+[ActionDataInput](./reference.md#definition-ActionDataInput)
+
+[ActionWhereInput](./reference.md#definition-ActionWhereInput)
+
+[Actions](./reference.md#definition-Actions)
+
+[Address](./reference.md#definition-Address)
+
+[AddressDataInput](./reference.md#definition-AddressDataInput)
+
+[AddressWhereInput](./reference.md#definition-AddressWhereInput)
+
+[Addresses](./reference.md#definition-Addresses)
+
+[Asset](./reference.md#definition-Asset)
+
+[AssetDataInput](./reference.md#definition-AssetDataInput)
+
+[AssetWhereInput](./reference.md#definition-AssetWhereInput)
+
+[Assets](./reference.md#definition-Assets)
+
+[Block](./reference.md#definition-Block)
+
+[BlockWhereInput](./reference.md#definition-BlockWhereInput)
+
+[Blocks](./reference.md#definition-Blocks)
+
+[Boolean](./reference.md#definition-Boolean)
+
+[Collateral](./reference.md#definition-Collateral)
+
+[CollateralDataInput](./reference.md#definition-CollateralDataInput)
+
+[CollateralWhereInput](./reference.md#definition-CollateralWhereInput)
+
+[Condition](./reference.md#definition-Condition)
+
+[ConditionDataInput](./reference.md#definition-ConditionDataInput)
+
+[ConditionWhereInput](./reference.md#definition-ConditionWhereInput)
+
+[Content](./reference.md#definition-Content)
+
+[ContentDataInput](./reference.md#definition-ContentDataInput)
+
+[ContentWhereInput](./reference.md#definition-ContentWhereInput)
+
+[Element](./reference.md#definition-Element)
+
+[ElementDataInput](./reference.md#definition-ElementDataInput)
+
+[ElementWhereInput](./reference.md#definition-ElementWhereInput)
+
+[Elements](./reference.md#definition-Elements)
+
+[Escrow](./reference.md#definition-Escrow)
+
+[EscrowDataInput](./reference.md#definition-EscrowDataInput)
+
+[EscrowWhereInput](./reference.md#definition-EscrowWhereInput)
+
+[Escrows](./reference.md#definition-Escrows)
+
+[Fee](./reference.md#definition-Fee)
+
+[FeeWhereInput](./reference.md#definition-FeeWhereInput)
+
+[Flow](./reference.md#definition-Flow)
+
+[FlowWhereInput](./reference.md#definition-FlowWhereInput)
+
+[Flows](./reference.md#definition-Flows)
+
+[ID](./reference.md#definition-ID)
+
+[Int](./reference.md#definition-Int)
+
+[JSONObject](./reference.md#definition-JSONObject)
+
+[Leg](./reference.md#definition-Leg)
+
+[LegWhereInput](./reference.md#definition-LegWhereInput)
+
+[Legs](./reference.md#definition-Legs)
+
+[Liquidity](./reference.md#definition-Liquidity)
+
+[LiquidityWhereInput](./reference.md#definition-LiquidityWhereInput)
+
+[Outcome](./reference.md#definition-Outcome)
+
+[OutcomeDataInput](./reference.md#definition-OutcomeDataInput)
+
+[OutcomeWhereInput](./reference.md#definition-OutcomeWhereInput)
+
+[Outcomes](./reference.md#definition-Outcomes)
+
+[Side](./reference.md#definition-Side)
+
+[Signature](./reference.md#definition-Signature)
+
+[SignatureDataInput](./reference.md#definition-SignatureDataInput)
+
+[SignatureWhereInput](./reference.md#definition-SignatureWhereInput)
+
+[String](./reference.md#definition-String)
+
+[Transaction](./reference.md#definition-Transaction)
+
+[TransactionDataInput](./reference.md#definition-TransactionDataInput)
+
+[TransactionWhereInput](./reference.md#definition-TransactionWhereInput)
+
+[Transactions](./reference.md#definition-Transactions)
+
+[Verification](./reference.md#definition-Verification)
+
+[VerificationDataInput](./reference.md#definition-VerificationDataInput)
+
+[VerificationWhereInput](./reference.md#definition-VerificationWhereInput)

@@ -1,3 +1,5 @@
+# Limits
+
 The Deep Lake API uses a number of safeguards to help maximize its stability and protect calling apps from moving volumes of assets that are not allowed by the app developer. Users who send many requests that do not respect certain constraints will see error responses show up as status code `400`, including:
 
 - A total BTC amount limiter that limits the maximum amount of BTC that can be moved by one asset in the assets array
