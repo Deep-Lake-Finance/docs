@@ -7,7 +7,7 @@
 
 * [API Overview](deep-lake-api/api.md)
 * [API Reference](deep-lake-api/reference.md)
-* [Limtis](deep-lake-api/Limits.md)
+* [Limits](deep-lake-api/Limits.md)
   
 ## Flagship Deep Lake Products
 
