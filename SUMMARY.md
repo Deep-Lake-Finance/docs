@@ -9,7 +9,7 @@
 * [Testnet](deep-lake-bitcoin-api/testnet.md)
 * [Wallets](deep-lake-bitcoin-api/wallets.md)
 * [API Reference](deep-lake-api/reference.md)
-* [Limits](deep-lake-api/Limits.md)
+* [Asset Limits](deep-lake-api/Limits.md)
 
 ## Flagship Deep Lake Products
 
