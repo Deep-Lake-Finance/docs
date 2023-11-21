@@ -3,10 +3,9 @@
 * [Welcome to Deep Lake](README.md)
 * [Introduction](introduction.md)
 
-## Developers
+## Deep Lake API
 
-* [API Sandbox](developers/api-sandbox.md)
-* [API Reference](developers/api/README.md)
+* [API Overview](deep-lake-api/api.md)
 
 ## Flagship Deep Lake Products
 

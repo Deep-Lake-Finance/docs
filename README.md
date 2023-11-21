@@ -6,10 +6,10 @@ Deep Lake is a suite of APIs designed to interact & simplify powerful Bitcoin pr
 
 ### Navigation
 
-* [**Developers:**](./developers/api/README.md) An in-depth view at the API creating thousands of use cases created from easier access to Bitcoin primitives
-* [**Applications:**](./flagship-deep-lake-products/easy-escrow-native-btc-liquidity-and-por/README.md) Out-of-the-box applications & helper methods by Deep Lake for faster implementation and easy use of Bitcoin Primitives (Taproot, DLCs, PSBTs, ...).
-* [**Security:**](./security/overview-of-security-and-risks.md) Overview of the security and risks associated with the Bitcoin properties being utilized and how Deep Lake is engaging with them
-* [**Use Cases:**](./use-cases-and-examples/bitcoin-defi/README.md) Examples & applications both innovative and re-hashed from existing DeFi & TradFi ideas—now possible with non custodianship & on native Bitcoin
+* [**Developers:**](deep-lake-api/api.md) An in-depth view at the API creating thousands of use cases created from easier access to Bitcoin primitives
+* [**Applications:**](flagship-deep-lake-products/easy-escrow-native-btc-liquidity-and-por/) Out-of-the-box applications & helper methods by Deep Lake for faster implementation and easy use of Bitcoin Primitives (Taproot, DLCs, PSBTs, ...).
+* [**Security:**](security/overview-of-security-and-risks.md) Overview of the security and risks associated with the Bitcoin properties being utilized and how Deep Lake is engaging with them
+* [**Use Cases:**](use-cases-and-examples/bitcoin-defi/) Examples & applications both innovative and re-hashed from existing DeFi & TradFi ideas—now possible with non custodianship & on native Bitcoin
 * [**Get API Access:**](https://px7u4llpikb.typeform.com/to/PqwXml8i) Learn how to get involved & book a call with the team to see how the power of Bitcoin Primitives (Taproot, DLCs, PSBTs, ...) are right for your protocol
 
 ### Links
