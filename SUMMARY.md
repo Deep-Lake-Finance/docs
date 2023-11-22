@@ -21,7 +21,7 @@
 
 ## Security
 
-* [Overview of Security & Risks](security/overview-of-security-and-risks.md)
+* [Overview of Security & Responsibilities](security/overview-of-security-and-risks.md)
 * [Bitcoin Primitives](security/bitcoin-primitives.md)
 
 ## Use Cases & Examples
