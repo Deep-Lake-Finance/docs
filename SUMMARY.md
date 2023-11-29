@@ -11,31 +11,29 @@
 * [API Reference](deep-lake-api/reference.md)
 * [Asset Limits](deep-lake-api/Limits.md)
 
-## Flagship Deep Lake Products
-
-* ["Easy Escrow" - Native BTC Liquidity & PoR](flagship-deep-lake-products/easy-escrow-native-btc-liquidity-and-por/README.md)
-  * [Quick Start](flagship-deep-lake-products/easy-escrow-native-btc-liquidity-and-por/quick-start.md)
-* [Flows](flagship-deep-lake-products/flows/README.md)
-  * [Staking](flagship-deep-lake-products/flows/staking.md)
-  * [Lending](flagship-deep-lake-products/flows/lending.md)
-
 ## Security
 
-* [Overview of Security & Responsibilities](security/overview-of-security-and-risks.md)
-* [Bitcoin Primitives](security/bitcoin-primitives.md)
+* [Overview & Responsibilities](security/overview-of-security-and-risks.md)
 
-## Use Cases & Examples
+## BITCOIN LIQUIDITY
 
-* [Bitcoin DeFi](use-cases-and-examples/bitcoin-defi/README.md)
-  * [Decentralized Derivatives & Options](use-cases-and-examples/bitcoin-defi/decentralized-derivatives-and-options.md)
-  * [Bitcoin Native Stablecoins](use-cases-and-examples/bitcoin-defi/bitcoin-native-stablecoins.md)
-  * [Lending & Borrowing](use-cases-and-examples/bitcoin-defi/lending-and-borrowing.md)
-* [Ordinals](use-cases-and-examples/ordinals/README.md)
-  * [Ordinals Lending](use-cases-and-examples/ordinals/ordinals-lending.md)
-* [GameFi & Gambling](use-cases-and-examples/gamefi-and-gambling/README.md)
-  * [Sports Betting](use-cases-and-examples/gamefi-and-gambling/sports-betting.md)
-* [Community](use-cases-and-examples/community/README.md)
-  * [Native L1 DAOs](use-cases-and-examples/community/native-l1-daos.md)
+* [Quick Start](bitcoin-liquidity/quick-start.md)
+* [Proof of Reserve](bitcoin-liquidity/proof-of-reserve.md)
+
+## FLOWS
+
+* [Staking](flows/staking.md)
+* [Lending](flows/lending.md)
+
+## GUIDES
+
+* [Ordinals Lending](guides/ordinals-lending.md)
+* [Ordinals Staking](guides/ordinals-staking.md)
+* [Decentralized Derivatives & Options](guides/decentralized-derivatives-and-options.md)
+* [Bitcoin Native Stablecoins](guides/bitcoin-native-stablecoins.md)
+* [Bitcoin Lending](guides/lending-and-borrowing.md)
+* [Sports Betting](guides/sports-betting.md)
+* [Native L1 DAOs](guides/native-l1-daos.md)
 
 ## Get API Access
 

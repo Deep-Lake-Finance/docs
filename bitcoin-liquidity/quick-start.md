@@ -4,7 +4,7 @@ description: Get Started in 10 Minutes
 
 # Quick Start
 
-### Infrastructure
+## Infrastructure
 
 Currently, Deep Lake offers an advanced helper method that can be integrated into any application that wants to utilize native Bitcoin.&#x20;
 
