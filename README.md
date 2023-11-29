@@ -1,6 +1,6 @@
 # Welcome to Deep Lake
 
-Deep Lake is a suite of APIs designed to interact & simplify powerful Bitcoin primitives, including Taproot, DLCs & PSBTs so developers can create trust-minimized & noncustodial smart contract applications directly on L1 without any side chains, wrapping, or bridging.
+Deep Lake offers a comprehensive suite of APIs and tools specifically designed to streamline and expedite access to Bitcoin's core features, including Taproot, Discreet Log Contracts (DLCs), and Partially Signed Bitcoin Transactions (PSBTs).  These tools are crafted to empower developers, enabling them to swiftly and efficiently develop trust-minimized and noncustodial smart contract applications directly on Bitcoin's layer 1. This approach eliminates the need for side chains, wrapping, or bridging, ensuring a more seamless and integrated development experience within the Bitcoin ecosystem.
 
 <figure><img src=".gitbook/assets/Peach Yellow Grid Mind Map Brainstorm.png" alt=""><figcaption></figcaption></figure>
 
