@@ -15,11 +15,6 @@
 
 * [Overview & Responsibilities](security/overview-of-security-and-risks.md)
 
-## BITCOIN LIQUIDITY
-
-* [Quick Start](bitcoin-liquidity/quick-start.md)
-* [Proof of Reserve](bitcoin-liquidity/proof-of-reserve.md)
-
 ## FLOWS
 
 * [Overview](flows/overview.md)
