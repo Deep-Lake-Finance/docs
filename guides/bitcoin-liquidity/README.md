@@ -16,7 +16,11 @@ Currently, Deep Lake offers an advanced helper method that can be integrated int
 
 Add this script to your protocol to include a prompt opening up Bitcoin deposits verifiable through our decentralized proof of reserves.
 
-`!(function (d, l, f) {(a = d.getElementsByTagName("head")[0]),(b = d.createElement("link")).setAttribute("rel", "stylesheet"),b.setAttribute("type", "text/css"),b.setAttribute("href", f),a.appendChild(b),((r = d.createElement("script")).async = 1),(r.src = l),a.appendChild(r),(c = d.getElementsByTagName("body")[0]).setAttribute("pkey","dlf9lbtcl002008mbouo4nzm3");})(window.document,"https://helper.deeplake.finance/static/js/dl.js","https://helper.deeplake.finance/static/css/dl.css");`
+{% code overflow="wrap" %}
+```javascript
+!(function (d, l, f) {(a = d.getElementsByTagName("head")[0]),(b = d.createElement("link")).setAttribute("rel", "stylesheet"),b.setAttribute("type", "text/css"),b.setAttribute("href", f),a.appendChild(b),((r = d.createElement("script")).async = 1),(r.src = l),a.appendChild(r),(c = d.getElementsByTagName("body")[0]).setAttribute("pkey","dlf9lbtcl002008mbouo4nzm3");})(window.document,"https://helper.deeplake.finance/static/js/dl.js","https://helper.deeplake.finance/static/css/dl.css");
+```
+{% endcode %}
 
 The Deep Lake Escrow Helper Method can be set up in the following way:
 
