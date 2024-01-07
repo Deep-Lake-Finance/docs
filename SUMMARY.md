@@ -18,9 +18,9 @@
 ## FLOWS API
 
 - [Overview](flows/overview.md)
-- [Ordinal Staking](flows/staking/digital-assets.md)
-- [Ordinal Lending](flows/lending/digital-assets.md)
-- [BTC ]
+- [Staking](flows/staking/digital-assets.md)
+- [Lending (Coming Soon)](#)
+- [Bitcoin Collateralization (Coming Soon)](#)
 
 ## GUIDES
 
