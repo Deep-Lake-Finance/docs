@@ -15,7 +15,7 @@
 
 - [Overview & Responsibilities](security/overview-of-security-and-risks.md)
 
-## FLOWS
+## FLOWS API
 
 - [Overview](flows/overview.md)
 - [Ordinal Staking](flows/staking/digital-assets.md)
@@ -25,7 +25,7 @@
 ## GUIDES
 
 - [Bitcoin Liquidity](guides/bitcoin-liquidity/README.md)
-  - [Proof of Reserve](guides/bitcoin-liquidity/proof-of-reserve.md)
+- [Proof of Reserve](guides/bitcoin-liquidity/proof-of-reserve.md)
 - [Ordinals Lending](guides/ordinals-lending.md)
 - [Ordinals Staking](guides/ordinals-staking.md)
 - [Decentralized Derivatives & Options](guides/decentralized-derivatives-and-options.md)

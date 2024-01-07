@@ -9,5 +9,5 @@ In simple words, flows allow a developer to use a ready-made succession of busin
 We are launching two very innovative products:
 
 - [Staking Digital Assets](staking/digital-assets.md)
-- [BTC Collateralization](lending.md) (coming soon)
+- [BTC Collateralization](#) (coming soon)
 - [Lending](lending/digital-assets.md) (coming soon)
