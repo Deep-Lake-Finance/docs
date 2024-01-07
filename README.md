@@ -10,7 +10,7 @@ Deep Lake offers a comprehensive suite of APIs and tools specifically designed t
 - [**Applications:**](broken-reference) Out-of-the-box applications & helper methods by Deep Lake for faster implementation and easy use of Bitcoin Primitives (Taproot, DLCs, PSBTs, ...).
 - [**Security:**](security/overview-of-security-and-risks.md) Overview of the security and risks associated with the Bitcoin properties being utilized and how Deep Lake is engaging with them
 - [**Use Cases:**](broken-reference) Examples & applications both innovative and re-hashed from existing DeFi & TradFi ideas—now possible with non custodianship & on native Bitcoin
-- [**Get API Access:**](https://px7u4llpikb.typeform.com/to/PqwXml8i) Learn how to get involved & book a call with the team to see how the power of Bitcoin Primitives (Taproot, DLCs, PSBTs, ...) are right for your protocol
+- [**Get API Access:**](https://px7u4llpikb.typeform.com/to/PqwXml8i) Learn how to get involved & book a call with the team to see how the power of Bitcoin Primitives (Taproot, DLCs, PSBTs, ...) are right for your protocol.
 
 ### Links
 
