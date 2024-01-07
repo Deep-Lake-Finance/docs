@@ -18,8 +18,8 @@
 ## FLOWS
 
 - [Overview](flows/overview.md)
-- [Ordinal Staking](flows/OrdinalStakingComingSoon.md)
-- [Ordinal Lending](flows/OrdinalLendingComingSoon.md)
+- [Ordinal Staking](flows/staking/digital-assets.md)
+- [Ordinal Lending](flows/lending/digital-assets.md)
 - [BTC ]
 
 ## GUIDES

@@ -1,3 +1,5 @@
+# Staking Flow
+
 ### Create the staking escrow:
 
 ```
