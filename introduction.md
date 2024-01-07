@@ -7,7 +7,7 @@ description: >-
 
 # Introduction
 
-<figure><img src=".gitbook/assets/Copy of The new Bitcoin stack (1500 × 1500 px) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/TheBitcoinStack1500×1500v2.png" alt=""><figcaption></figcaption></figure>
 
 ### Welcome To The New Bitcoin Stack
 
