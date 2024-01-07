@@ -19,8 +19,8 @@
 
 - [Overview](flows/overview.md)
 - [Staking](flows/staking/digital-assets.md)
-- [Lending (Coming Soon)](#)
-- [Bitcoin Collateralization (Coming Soon)](#)
+- [Lending (Coming Soon)](flows/coming-soon.md)
+- [Bitcoin Collateralization (Coming Soon)](flows/coming-soon.md)
 
 ## GUIDES
 
