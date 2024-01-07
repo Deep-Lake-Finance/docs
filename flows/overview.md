@@ -4,9 +4,10 @@ The most important thing that can be provided to developers and product teams is
 
 ## This is why we introduced FLOWS
 
-In simple words, flows allow a developer to use a ready-made succession of business steps related to Bitcoin using one simple API: the execute Flow API.  Our platform takes care of and handles the underlying logic.
+In simple words, flows allow a developer to use a ready-made succession of business steps related to Bitcoin using one simple API: the execute Flow API. Our platform takes care of and handles the underlying logic.
 
 We are launching two very innovative products:
 
-* [Staking](staking.md) (coming soon)
-* [Lending](lending.md) (coming soon)
+- [Staking Digital Assets](staking/digital-assets.md)
+- [BTC Collateralization](lending.md) (coming soon)
+- [Lending](lending/digital-assets.md) (coming soon)
