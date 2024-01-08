@@ -30,7 +30,7 @@ const data = {
 
 const { data: escrow } = await axios.post(
   `${DEEP_LAKE_REST_API_URL}/flows/execute`,
-  data,
+  { data },
   { headers }
 );
 ```
@@ -50,7 +50,7 @@ const data = {
 const where = qs.stringify({ where: { id: flow.id } });
 const { data: escrow } = await axios.post(
   `${DEEP_LAKE_REST_API_URL}/flows/execute?${where}`,
-  data,
+  { data },
   { headers }
 );
 ```
@@ -70,7 +70,7 @@ const data = {
 const where = qs.stringify({ where: { id: flow.id } });
 const { data: escrow } = await axios.post(
   `${DEEP_LAKE_REST_API_URL}/flows/execute?${where}`,
-  data,
+  { data },
   { headers }
 );
 ```
@@ -90,7 +90,7 @@ const where = qs.stringify({ where: { id: flow.id } });
 
 const { data: escrow } = await axios.post(
   `${DEEP_LAKE_REST_API_URL}/flows/execute?${where}`,
-  data,
+  { data },
   { headers }
 );
 ```
