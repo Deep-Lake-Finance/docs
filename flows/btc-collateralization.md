@@ -1,6 +1,6 @@
 ### Create the collateral:
 
-```
+```javascript
 const headers = { Authorization: MY_COMPANY_API_KEY };
 const data = {
   where: {},
@@ -10,7 +10,8 @@ const data = {
       cardinal: {
         amount: 100,
         value: "2N1mLRYwgHDPFUvUYaAbBh1FDjqY9cVraDN",
-        publicKey: "1527224d68008a5b8f8cq4ffc10cb7f347d0374cb2fd4357e30c4b27afe89bca",
+        publicKey:
+          "1527224d68008a5b8f8cq4ffc10cb7f347d0374cb2fd4357e30c4b27afe89bca",
       },
     },
     expiry: "2023-09-21 18:25:29.812238",
@@ -26,7 +27,7 @@ const { data: escrow } = await axios.post(
 
 ### Sign and broadcast the collateral:
 
-```
+```javascript
 const headers = { Authorization: MY_COMPANY_API_KEY };
 const data = {
   where: { id: flow.id },
@@ -45,7 +46,7 @@ const { data: escrow } = await axios.post(
 
 ### Unlock the collateral:
 
-```
+```javascript
 const headers = { Authorization: MY_COMPANY_API_KEY };
 const data = {
   where: { id: flow.id },
@@ -65,7 +66,7 @@ const { data: escrow } = await axios.post(
 
 ### Sign and broadcast the unlock:
 
-```
+```javascript
 const headers = { Authorization: MY_COMPANY_API_KEY };
 const data = {
   where: { id: flow.id },
