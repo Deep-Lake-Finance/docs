@@ -1,29 +1,29 @@
 # Deep Lake Flow APIs - Lending
 
-The Flow apis represent a new approach to Bitcoin DeFi development. In this new approach we attempt to tackle **DeFi** problems
-instead of **Bitcoin development** problems. For example, as of this writing, we have provided Flow APIs for Ordinal
-Lending and Ordinal Staking. Future Flows include (potentially) Ordinal Market, Bitcoin Lending, Bitcoin Locking (see our
-existing easy button), Ordinal Trading, and much more.
+## Introduction
 
 So what is a "flow"? A flow is a high level abstraction for a multi-user interaction around Bitcoin transactions.
 For example, with ordinal lending, you might normally expect to have a borrower and a lender. And we can define their interaction
 into two conceptual areas:
 
 1. the loan data ( collateral,amount,interest, duration, etc )
-1. the loan progress ( offered,active,repaid,liquidated, etc )
+2. the loan progress ( offered,active,repaid,liquidated, etc )
 
 These two, together, identify a Flow!
 
-Note that we havent talked about DLCs, PSBTs, Taproot. Flows abstract the need to track these Bitcoin primitives for app developers.
+The Flow API silently tracks the progress of a lending process, and allows the developer to only focus on providing the correct data for the current state.
+
+Note that we havent talked about Bitcoin Script, DLCs, PSBTs, or Taproot. Flows abstract the need to track these Bitcoin primitives for app developers.
+
 Of course, your users will still need to sign PSBT messages, but the developer focuses on the FLOW.
 
-# Deep Lake Ordinal Lending Flow API
+## Setting the stage
 
 A loan between borrower and lender usually involves collateral, a loan amount, a loan duration, and an interest rate.  
 There are two outcomes of this loan:
 
-1. the borrower repays and gets (claims) their collateral back
-1. the borrower does not repay and gets liquidated (lender claims the collateral)
+1. repayment: the borrower repays and claims their collateral
+2. liquidation: the borrower does not repay and gets liquidated. Here the lender claims the collateral.
 
 The life of a loan follows in some well-defined stages:
 
@@ -32,10 +32,16 @@ The life of a loan follows in some well-defined stages:
 3. The borrower locks the collateral
 4. The loan amount is transferred to the borrower
 
-The loan is completed when: 5. The borrower repays the loan 6. The borrower claims their collateral
-or 5. The lender liquidates the loan and claims the collateral
+The loan is completed when:
 
-In order to execute some of these steps, you'll need signatures from yuour users.
+5. The borrower repays the loan
+6. The borrower claims their collateral
+
+or
+
+5. The lender liquidates the loan and claims the collateral
+
+In order to execute some of these steps, you'll need signatures from your users.
 
 ## Create a flow
 
@@ -49,7 +55,7 @@ POST https://api.test.deeplake.fi/api/flows/execute
 
 ## Headers
 
-```
+```javascript
 Content-Type: application/json
 Authorization: YOUR_ACCESS_TOKEN // FLOWORDLENDTEST
 ```
