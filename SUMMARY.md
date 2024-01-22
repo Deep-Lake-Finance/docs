@@ -11,6 +11,10 @@
 - [API Reference](deep-lake-api/reference.md)
 - [Asset Limits](deep-lake-api/Limits.md)
 
+## Deep Lake Oracle
+
+- [Introduction](oracle/introduction-to-deep-lake-oracle.md)
+
 ## Security
 
 - [Overview & Responsibilities](security/overview-of-security-and-risks.md)
@@ -36,4 +40,4 @@
 
 ## Get API Access
 
-- [Sign Up](get-api-access/sign-up.md)
+- [Sign Up](https://app.deeplake.finance/#/signup/profile)
