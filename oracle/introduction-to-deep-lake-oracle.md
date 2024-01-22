@@ -27,7 +27,7 @@ The Leader serves as the orchestrator of the signing process, playing key roles 
 
 Followers are integral to the attestation and signing process, with functionalities including:
 
-- Utilizing partial signing key pairs for contributing to the signing process.
+- Utilizing partial signing key pairs to contribute to the signing process.
 - Implementing the MuSig2 protocol (as per [BIP-0327](https://github.com/bitcoin/bips/blob/master/bip-0327.mediawiki)), enabling joint signatures without revealing private keys.
 
 ### Multi-Language Compatibility/Diversity
@@ -48,7 +48,7 @@ The Follower nodes in the Deep Lake Oracle Platform are designed for compatibili
 
 ### Data Feeds
 
-Data feeds are modular and independently defined, so that they are extensible and safe.
+Data feeds are modular and independently defined so that they are extensible and safe.
 
 Available data feeds:
 
@@ -124,11 +124,9 @@ A Bitcoin Developer needs to call the Oracle’s Create Outcome API with the fol
       "module": "movement",
       "filter": {
         "gt": {
-          // transaction happenes after this date
           "createdDate": "2023-12-23T12:29:42.021927957+00:00"
         },
         "lt": {
-          // transaction happens before this date
           "createdDate": "2023-12-23T14:29:42.021927957+00:00"
         },
         "where": {
